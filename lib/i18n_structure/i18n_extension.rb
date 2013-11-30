@@ -24,9 +24,9 @@ I18n.extend( Module.new{
   private
     # change passed object to key used in localization
     def to_mode_name(model)
-      if model.kind_of?(ActiveRecord)
+      if defined?(ActiveRecord) && model.kind_of?(ActiveRecord)
         model.class.model_name.singular
-      elsif model.kind_of?(Draper::Decorator)
+      elsif defined?(Draper) && model.kind_of?(Draper::Decorator)
         model.source.class.model_name.singular
       elsif model.is_a?(Class)
         model.model_name.singular
