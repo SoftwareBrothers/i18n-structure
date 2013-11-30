@@ -1,0 +1,21 @@
+en:
+  activerecord:
+    attributes:
+      bar:
+        foo: foobar
+        foo_collection:
+          - 
+            - first_name
+            - first_value
+          - 
+            - second_name
+            - secong_value
+  collections:
+    foo_collection:
+      - 
+        - element1_key
+        - element1_value
+  attributes:
+    foo: foobar_global
+  labels:
+    exist_label: it exist !

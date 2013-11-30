@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "i18n_structure"
   spec.version       = I18nStructure::VERSION
   spec.authors       = ["Wojciech Krysiak"]
-  spec.email         = ["wojciech.krysiak@kmpgroup.pl"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.email         = ["wojciech.g.krysiak@gmail.com"]
+  spec.description   = %q{Create structure for I18n locale files}
+  spec.summary       = %q{Create structure for I18n locale files}
+  spec.homepage      = "https://github.com/KMPgroup/i18n-structure"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -18,6 +18,10 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_runtime_dependency 'rails', '>= 3.0.0'
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency 'rails'
+  spec.add_development_dependency 'draper'
+  spec.add_development_dependency 'rspec'
 end
