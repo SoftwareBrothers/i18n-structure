@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'i18n_structure/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "i18n_structure"
+  spec.name          = "i18n-structure"
   spec.version       = I18nStructure::VERSION
   spec.authors       = ["Wojciech Krysiak"]
   spec.email         = ["wojciech.g.krysiak@gmail.com"]

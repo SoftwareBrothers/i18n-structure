@@ -18,4 +18,4 @@ en:
   attributes:
     foo: foobar_global
   labels:
-    exist_label: it exist !
+    exist_label: it exist!
