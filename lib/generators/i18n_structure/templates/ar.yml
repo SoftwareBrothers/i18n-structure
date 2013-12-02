@@ -1,0 +1,29 @@
+pl: 
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              some_errors_for_ar: You have error for this field
+    labels:
+      user:
+        example_field_with_versions:
+          one: one version
+          few: fev version
+          many: many version
+          other: other version
+        other_normal_field: This is first header
+    tooltips:
+      user:
+        id: Example Tooltip for id
+    attributes:
+      user:
+        example_category: My awesome category
+        example_category_collection:
+          - 
+            - only right
+            - right
+          - 
+            - only wrong
+            - wrong
