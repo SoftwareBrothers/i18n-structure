@@ -2,7 +2,7 @@ Description:
     Generates translations for all models and default global translations
 
 Example:
-    % rails g i18nstructure locale_name (pl, en ....)
+    % rails g i18nstructure file_name (pl, en ....)
 
     This will create:
         config/locales/locale/en/labels.yml
