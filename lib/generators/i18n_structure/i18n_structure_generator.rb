@@ -3,17 +3,17 @@
 
 class I18nStructureGenerator < Rails::Generators::NamedBase
   source_root File.expand_path("../templates", __FILE__)
+  argument :locale_name, :type => :string, :default => "pl"
 
   def main
-    unless file_name =~ /^[a-zA-Z]{2}([-_][a-zA-Z]+)?$/
+    unless locale_name =~ /^[a-zA-Z]{2}([-_][a-zA-Z]+)?$/
       log 'ERROR: Wrong locale format. Please give locale in XX or XX-XX format.'
       exit
     end
-    log "create i18n structure for locale: #{file_name}"
-    i18n.locale = file_name
+    log "create i18n structure for locale: #{locale_name}"
 
-    create_folders_for_locale(file_name)
-    copy_initializer_file(file_name)
+    create_folders_for_locale(locale_name)
+    copy_initializer_file(locale_name)
   end
 
 
