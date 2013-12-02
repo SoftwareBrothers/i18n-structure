@@ -16,6 +16,7 @@ class I18nStructureGenerator < Rails::Generators::NamedBase
 
     create_folders_for_locale(locale_name)
     copy_initializer_file(locale_name)
+    create_ar_locales(locale_name)
   end
 
 
@@ -44,7 +45,9 @@ class I18nStructureGenerator < Rails::Generators::NamedBase
         h[locale] = h.delete("locale_name")
         File.open(url, 'w') {|f| f.write h.to_yaml }
       end
+    end
 
-      # copy_file "ar.yml", "config/locales/#{locale}/ar"
+    def create_ar_locales(locale_name)
+      log ActiveRecord::Base.connection.tables
     end
 end
