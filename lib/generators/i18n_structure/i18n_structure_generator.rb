@@ -17,16 +17,13 @@ class I18nStructureGenerator < Rails::Generators::NamedBase
     create_folders_for_locale(locale_name)
     copy_initializer_file(locale_name)
     create_ar_locales(locale_name)
+    update_locale_lookup_path
   end
 
 
   private
     def update_locale_lookup_path
-      # application "config.asset_host = 'http://example.com'"
-      # config.i18n.load_path += Dir[
-      #   Rails.root.join('config', 'locales', 'pl' ,'*.{rb,yml}').to_s,
-      #   Rails.root.join('config', 'locales', 'pl' , "activerecord" ,'*.{rb,yml}').to_s
-      # ]
+      application "config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]"
     end
 
     def create_folders_for_locale(locale)
