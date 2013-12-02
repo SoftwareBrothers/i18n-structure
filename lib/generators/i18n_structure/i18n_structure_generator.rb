@@ -1,5 +1,7 @@
 # require 'generators/i18n_translation/lib/yaml'
-# require 'generators/i18n_translation/lib/translator'
+require 'activerecord'
+require 'i18n'
+require 'yaml'
 
 class I18nStructureGenerator < Rails::Generators::NamedBase
   source_root File.expand_path("../templates", __FILE__)
@@ -35,8 +37,14 @@ class I18nStructureGenerator < Rails::Generators::NamedBase
       empty_directory "config/locales/#{locale}"
       empty_directory "config/locales/#{locale}/ar"
       %w{attributes.yml collections.yml labels.yml tooltips.yml}.each do |fn|
-        copy_file fn, "config/locales/#{locale}/#{fn}.rb"
+        url = "config/locales/#{locale}/#{fn}"
+        copy_file fn, url
+
+        h = YAML::load_file(url)
+        h[locale] = h.delete("locale_name")
+        File.open(url, 'w') {|f| f.write h.to_yaml }
       end
-      copy_file "ar.yml" "config/locales/#{locale}/ar"
+
+      # copy_file "ar.yml", "config/locales/#{locale}/ar"
     end
 end
