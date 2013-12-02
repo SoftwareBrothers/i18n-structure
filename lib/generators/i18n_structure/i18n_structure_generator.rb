@@ -54,7 +54,7 @@ class I18nStructureGenerator < Rails::Generators::NamedBase
         file_url = ar_path+"/#{table_name}.yml"
         copy_file "ar.yml", file_url
         h = YAML::load_file(file_url)
-        h["locale_name"] = h.delete(locale_name)
+        h[locale_name] = h.delete("locale_name")
         h[locale_name]["activerecord"]["errors"]["models"][table_name] = h[locale_name]["activerecord"]["errors"]["models"].delete("model_name")
         File.open(url, 'w') {|f| f.write h.to_yaml }
       end
