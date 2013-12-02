@@ -48,7 +48,7 @@ class I18nStructureGenerator < Rails::Generators::NamedBase
 
     def create_ar_locales(locale_name)
       table_names = ActiveRecord::Base.connection.tables.reject{|name| name == "schema_migrations"}
-      ar_path = "config/locales/#{locale}/ar"
+      ar_path = "config/locales/#{locale_name}/ar"
       empty_directory ar_path if table_names.any?
       table_names.each do |table_name|
         file_url = ar_path+"/#{table_name}.yml"
