@@ -36,18 +36,27 @@ class I18nStructureGenerator < Rails::Generators::NamedBase
 
     def copy_initializer_file(locale)
       empty_directory "config/locales/#{locale}"
-      empty_directory "config/locales/#{locale}/ar"
       %w{attributes.yml collections.yml labels.yml tooltips.yml}.each do |fn|
         url = "config/locales/#{locale}/#{fn}"
         copy_file fn, url
 
         h = YAML::load_file(url)
-        h[locale] = h.delete("locale_name")
+        h[locale] = h.delete(locale_name)
         File.open(url, 'w') {|f| f.write h.to_yaml }
       end
     end
 
     def create_ar_locales(locale_name)
-      log ActiveRecord::Base.connection.tables
+      table_names = ActiveRecord::Base.connection.tables.reject{|name| name == "schema_migrations"}
+      ar_path = "config/locales/#{locale}/ar"
+      empty_directory ar_path if table_names.any?
+      table_names.each do |table_name|
+        file_url = ar_path+"/#{table_name}.yml"
+        copy_file "ar.yml", file_url
+        h = YAML::load_file(file_url)
+        h[locale] = h.delete(locale_name)
+        h[locale_name]["activerecord"]["errors"]["models"][table_name] = h[locale_name]["activerecord"]["errors"]["models"].delete("model_name")
+        File.open(url, 'w') {|f| f.write h.to_yaml }
+      end
     end
 end
