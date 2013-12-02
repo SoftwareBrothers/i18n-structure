@@ -1,5 +1,5 @@
 # require 'generators/i18n_translation/lib/yaml'
-require 'activerecord'
+require 'rails/generators'
 require 'i18n'
 require 'yaml'
 
