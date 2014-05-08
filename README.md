@@ -1,5 +1,7 @@
 # I18nStructure
 
+[![Code Climate](https://codeclimate.com/github/KMPgroup/i18n-structure.png)](https://codeclimate.com/github/KMPgroup/i18n-structure)
+
 ## Put in order your locale files
 
 This gem adds support of nice and nifty structure of locale files to your Rails app.
