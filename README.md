@@ -1,6 +1,7 @@
 # I18nStructure
 
 [![Code Climate](https://codeclimate.com/github/KMPgroup/i18n-structure.png)](https://codeclimate.com/github/KMPgroup/i18n-structure)
+[![RST](http://rst-it.com/files/rstwithpassion.png)](http://rst-it.com) [![RST](http://rst-it.com/files/howwedoapps.png)](http://howwedoapps.com)
 
 ## Put in order your locale files
 
