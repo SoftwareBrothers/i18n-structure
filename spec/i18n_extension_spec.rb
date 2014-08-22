@@ -30,11 +30,11 @@ describe I18n do
 
   describe ".translate_label_exist?" do
     it "checks unexisting label" do
-      expect(I18n.tl?(:some_dummmy_unexisted_key, :also_dummy_model)).to be_false
+      expect(I18n.tl?(:some_dummmy_unexisted_key, :also_dummy_model)).to eq(false)
     end
 
     it "checks existing label" do
-      expect(I18n.translate_label_exist?(:exist_label)).to be_true
+      expect(I18n.translate_label_exist?(:exist_label)).to eq(true)
     end
   end
 end
