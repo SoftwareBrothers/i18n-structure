@@ -19,3 +19,8 @@ en:
     foo: foobar_global
   labels:
     exist_label: it exist!
+  views:
+    navigation:
+      home: home page
+    _soma_partial:
+      first_text: first text

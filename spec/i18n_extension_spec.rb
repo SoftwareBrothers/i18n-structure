@@ -37,4 +37,18 @@ describe I18n do
       expect(I18n.translate_label_exist?(:exist_label)).to eq(true)
     end
   end
+
+  describe ".translate_view" do 
+    it "translates view" do
+      expect(I18n.translate_view(:home, :navigation)).to eq "home page"
+    end
+
+    it "translates view using alias" do
+      expect(I18n.tv(:home, :navigation)).to eq "home page"
+    end
+
+    it "translates view named as partial" do
+      expect(I18n.tv(:first_text, :_soma_partial)).to eq "first text"
+    end
+  end
 end

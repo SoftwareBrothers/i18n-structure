@@ -16,10 +16,17 @@ I18n.extend( Module.new{
     if model
       translate_attribute(key.to_s+"_collection", model, options)
     else
-      I18n.t(key, :scope => [:collections])
+      I18n.t(key, {:scope => [:collections]}.merge(options))
     end
   end
   alias_method :tc, :translate_collection
+
+  # views are handled different than other elements
+  def translate_view(key, view, options={})
+    throw "You have to define model" unless view
+    I18n.t(key, {:scope => [:views, view]}.merge(options))
+  end
+  alias_method :tv, :translate_view
 
   private
     # change passed object to key used in localization

@@ -1,7 +1,8 @@
 # I18nStructure
 
 [![Code Climate](https://codeclimate.com/github/KMPgroup/i18n-structure.png)](https://codeclimate.com/github/KMPgroup/i18n-structure)
-[![RST](http://rst-it.com/files/rstwithpassion.png)](http://rst-it.com) [![RST](http://rst-it.com/files/howwedoapps.png)](http://howwedoapps.com)
+[![RST](http://rst-it.com/files/rstwithpassion.png)](http://rst-it.com) [![RST](http://rst-it.com/files/howwedoapps.png)](http://howwedoapps.com) 
+[![Build Status](https://travis-ci.org/rstgroup/i18n-structure.svg?branch=add_views)](https://travis-ci.org/rstgroup/i18n-structure)
 
 ## Put in order your locale files
 
@@ -27,6 +28,9 @@ pl:
         - false
   tooltips: #/config/locales/pl/tooltips.yml
     name: Nazwa jest to .. #Some tooltip for name
+  views:
+    home_page:
+      header: naglowek
   activerecord:
     attributes:
       order: #/config/locales/pl/ar/order.yml
@@ -54,8 +58,9 @@ translate_label(key, model=nil, options={}) #alias tl()
 translate_tooltip(key, model=nil, options={}) #alias tt()
 translate_attribute(key, model=nil, options={}) #alias ta()
 translate_collection(key, model=nil, options={}) #alias tc()
+translate_view(key, view_name, options={}) #alias tv()
 
-# and corresponding methods which tests presence of given translation:
+# labels, tooltips and attributes have corresponding methods which tests presence of given translation:
 translate_label?(key, model=nil, options={}) #alias tl?()
 ...
 
