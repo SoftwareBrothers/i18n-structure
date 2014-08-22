@@ -9,7 +9,7 @@ This gem adds support of nice and nifty structure of locale files to your Rails 
 Gem divides translations into two groups:
 
 - global namespaced translations: they could be repeated among different pages for different resources: for example **send** or **confirm** 
-- resource (activerecord) namespaced translations: specyfic for resource, for example **send request**, **add storey**. They are stored in files named after resource (**article.yml**) inside **config/locales/LOCALE_NAME/ar** folder
+- resource (activerecord) namespaced translations: specific for resource, for example **send request**, **add storey**. They are stored in files named after resource (**article.yml**) inside **config/locales/LOCALE_NAME/ar** folder
 
 **Supported locale structure:** for example polish translations
 
@@ -113,7 +113,7 @@ Or install it yourself as:
 
 You can generate all necessary locale files by using generator
 
-    $ rails g i18nstructure pl #for polish translations
+    $ rails g i18n_structure pl #for polish translations
 
 Generator also adds:
 
