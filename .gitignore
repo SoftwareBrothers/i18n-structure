@@ -15,3 +15,7 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+.ruby-gemset
+.ruby-version
+atlassian-ide-plugin.xml
+spec/database.sqlite
