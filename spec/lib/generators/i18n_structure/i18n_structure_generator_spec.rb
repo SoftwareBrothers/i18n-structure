@@ -6,9 +6,9 @@ require 'fileutils'
 
 describe I18nStructureGenerator do
 
-  url = GeneratorTestHelper.url
+  url = File.expand_path("../../tmp", __FILE__)
   destination url
-  arguments %w(pl)
+  arguments %w(en)
 
   before(:all) do
     ActiveRecord::Base.establish_connection(
@@ -27,7 +27,7 @@ describe I18nStructureGenerator do
       expect(destination_root).to have_structure {
         directory 'config' do
           directory 'locales' do
-            directory 'pl' do
+            directory 'en' do
               directory 'ar'
               file 'labels.yml'
               file 'tooltips.yml'
