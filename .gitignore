@@ -19,3 +19,4 @@ tmp
 .ruby-version
 atlassian-ide-plugin.xml
 spec/database.sqlite
+.idea
