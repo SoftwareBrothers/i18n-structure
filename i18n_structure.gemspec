@@ -23,4 +23,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency 'draper'
   spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency 'generator_spec'
+  spec.add_development_dependency 'sqlite3'
+
 end

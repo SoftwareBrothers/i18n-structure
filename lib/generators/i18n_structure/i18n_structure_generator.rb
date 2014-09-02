@@ -3,9 +3,9 @@ require 'rails/generators'
 require 'i18n'
 require 'yaml'
 
-class I18nStructureGenerator < Rails::Generators::NamedBase
+class I18nStructureGenerator < Rails::Generators::Base
   source_root File.expand_path("../templates", __FILE__)
-  argument :locale_name, :type => :string, :default => "pl"
+  argument :locale_name, :type => :string, default: 'pl'
 
   def main
     unless locale_name =~ /^[a-zA-Z]{2}([-_][a-zA-Z]+)?$/
