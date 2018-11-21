@@ -1,9 +1,5 @@
 # I18nStructure
 
-[![Code Climate](https://codeclimate.com/github/KMPgroup/i18n-structure.png)](https://codeclimate.com/github/KMPgroup/i18n-structure)
-[![RST](http://rst-it.com/files/rstwithpassion.png)](http://rst-it.com) [![RST](http://rst-it.com/files/howwedoapps.png)](http://howwedoapps.com) 
-[![Build Status](https://travis-ci.org/rstgroup/i18n-structure.svg?branch=add_views)](https://travis-ci.org/rstgroup/i18n-structure)
-
 ## Put in order your locale files
 
 This gem adds support of nice and nifty structure of locale files to your Rails app.
@@ -98,7 +94,6 @@ end
 
 ```
 
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -137,4 +132,14 @@ in your application.rb
 
 ## License
 
-MIT
+i18n-structure is Copyright © 2018 SoftwareBrothers.co. It is free software, and may be redistributed under the terms specified in the [LICENSE](LICENSE) file.
+
+## About SoftwareBrothers.co
+
+<img src="https://softwarebrothers.co/assets/images/software-brothers-logo-full.svg" width=240>
+
+
+We’re an open, friendly team that helps clients from all over the world to transform their businesses and create astonishing products.
+
+* We are available to [hire](https://softwarebrothers.co/contact).
+* If you want to work for us - checkout the [career page](https://softwarebrothers.co/career).
